@@ -12,6 +12,7 @@ export function useMediaQuery(query) {
 		const media = window.matchMedia(query);
 		if (media.matches !== matches) {
 			setMatches(media.matches);
+			
 		}
 
 		const listener = () => {
@@ -47,8 +48,10 @@ function Header() {
 	useEffect(() => {
 		const constTrigger = document.querySelectorAll('.contact-toggler');
 		if (constTrigger) {
+			
 			constTrigger.forEach(e => {
 				e.addEventListener('click', hadlerSetOpen)
+				
 			});
 		}
 	}, []);
@@ -78,14 +81,19 @@ function Header() {
 
 		})
 		function navHandler() {
+			
+			
 			setNavOpen(true);
 		}
 		if (size.width >= 768) {
+			
 			navHandler();
 		} else {
+			
 			setNavOpen(false);
 		}
 	}, [])
+
 
 
 	return (
@@ -101,13 +109,13 @@ function Header() {
 						</Link>
 					</div>
 					<div className={styles['item_right']}>
-						<ul className={`${styles['menu_li_set']} list-unstyled mb-0 ${navOpen ? styles['open'] : ''} `} >
+						<ul className={`${styles['menu_li_set']}  list-unstyled mb-0  ${navOpen ? styles['open'] : ''}  ` } >
 							<li><Link className='link f-space-mono ' to="/">.home()</Link></li>
 							<li><Link className='link f-space-mono ' to="/work">.work()</Link></li>
 							<li><Link className='link f-space-mono ' to="/about">.tech()</Link></li>
-							<li><Link className='link f-space-mono ' to="/">Contact</Link></li>
+							<li><Link className='link f-space-mono ' to="/">.Contact()</Link></li>
 						</ul>
-						<div id={styles['hamburger']} className={`d-block d-md-none ${navOpen ? styles['open'] : ''}`} onClick={() => setNavOpen(!navOpen)}>
+						<div id={styles['hamburger']} className={`d-block d-md-none navbar_cl ${navOpen ? styles['open'] : ''}`} onClick={() => setNavOpen(!navOpen)}>
 							<svg width="30" height="30" viewBox="0 0 100 100">
 								<path className={`${styles['line']} ${styles['line1']}`} d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
 								<path className={`${styles['line']} ${styles['line2']}`} d="M 20,50 H 80" />

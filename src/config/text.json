@@ -1,0 +1,10 @@
+{
+	"titles":{
+		"intro":"Hello!<span>👋🏻</span>, I'm <span class =\"text-color-purple\">Sarabjeet Singh.</span>"
+	},
+
+	"subtext":{
+		"introSub": "I'm a <span class=\"age\"></span>-years-old Self-Taught Graphic Designer & Front-End Developer!!"
+	}
+
+}
